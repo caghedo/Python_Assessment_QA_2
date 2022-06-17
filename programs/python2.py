@@ -32,7 +32,10 @@ import random
 
 
 def one(string):
-    return
+    empstr=""
+    for l in string:
+        empstr+=l*3
+    return empstr
 
     # <QUESTION 2>
 
@@ -51,7 +54,15 @@ def one(string):
 
 
 def two(num):
-    return
+    prime=True
+    if num > 1:
+        for i in range(2, num):
+            if (num % i) == 0:
+                prime=False
+    if prime==True:
+        return True
+    else:
+        return False
 
     # <QUESTION 3>
 
@@ -69,7 +80,8 @@ def two(num):
 
 
 def three(a):
-    return
+    sum=str(int)+str(int+int)+str(int+int+int)+str(int+int+int+int)
+    return sum
 
     # <QUESTION 4>
 
@@ -117,7 +129,13 @@ def four(string1, string2):
 
 
 def five():
-    return
+    import random
+    list=[]
+    while len(list)<5:
+        x=random.randint(100,200)
+        if x%2==0:
+           list.append(x)
+    return list
 
     # <QUESTION 6>
 
@@ -137,7 +155,10 @@ def five():
 
 
 def six(string):
-    return
+    if string[-1]=='y'and string[-2]=='p':
+            return True
+    else:
+        return False
 
     # <QUESTION 7>
 
@@ -162,8 +183,12 @@ def six(string):
 
 
 def seven(a, b, c):
-    return
-
+    list=[a,b,c]
+    list.sort()
+    if list[1]-list[0]==list[2]-list[1]:
+        return True
+    else:
+        return False
     # <QUESTION 8>
 
     # Given a string and an integer, n, return a string that removes n letters from the 'middle' of the string.
@@ -199,8 +224,25 @@ def eight(string, num):
 
 
 def nine(string1, string2):
-    # make sure string1 is the shortest of the two
-    return
+    count=0
+    count2=0
+    stringyes=False
+    string2yes=False
+    for x in string:
+        if x in string2:
+            count += 1
+    if count == len(string):
+        stringyes=True
+    for t in string2:
+        if t in string:
+            count2+=1
+    if count2==len(string2):
+        string2yes=True
+    if stringyes==True or string2yes==True:
+        return True
+    else:
+        return False
+  
 
     # <QUESTION 10>
 
